@@ -1,11 +1,11 @@
 import boto3
 import os
 
-AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY_ID")
-AWS_SECRET_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
+AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY")
 BUCKET_NAME = os.getenv("BUCKET_NAME")
-FILE_PATH = "./data/nba_stats.csv"
-S3_KEY = "raw/nba_stats.csv"
+FILE_PATH = "/opt/airflow/data/player_stats_2024-25.csv"
+S3_KEY = "raw/player_stats.csv"
 
 def upload_to_s3():
     s3 = boto3.client(
